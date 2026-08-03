@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/*
+This allows Tailwind dark: classes to work when the
+"dark" class is added to the HTML element.
+*/
+@custom-variant dark (&:where(.dark, .dark *));

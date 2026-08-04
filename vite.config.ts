@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [tailwindcss()],
-  base: '/tailwind-portfolio/',
-})
+
+  base: mode === 'github'
+    ? '/tailwind-portfolio/'
+    : '/',
+}))
